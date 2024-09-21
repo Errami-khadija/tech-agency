@@ -6,4 +6,7 @@ export default defineConfig({
   resolve: {
     alias: [{ find: "@", replacement: "/src" }],
   },
+  build: {
+    outDir: 'dist',  // This ensures Vite outputs to the 'dist' folder
+  }
 });
