@@ -82,7 +82,7 @@ app.post("/register", async (req, res) => {
 
     res.status(200).json({ message: 'Registration successful, please verify your email.' });
   } catch (error) {
-    console.error(error);
+    console.error('Error during registration:', error); // Log the exact error
     res.status(500).json({ error: 'Internal server error, please try again later.' });
   }
 });
