@@ -22,7 +22,7 @@ export function Users() {
     const fetchData = async () =>{
       setLoading(true);
       try {
-        const { data: response } = await axios.get('http://127.0.0.1:1000/user');
+        const { data: response } = await axios.get('https://tech-agency.onrender.com/user');
         setData(response);
       } catch (error) {
         console.error(error.message);

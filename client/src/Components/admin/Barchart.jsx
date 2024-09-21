@@ -8,7 +8,7 @@ function BarChart() {
     const [orderCountByDay, setOrderCount] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:1000/chart")
+    axios.get("https://tech-agency.onrender.com/chart")
       .then(res => {
         setOrderCount(res.data);
       })

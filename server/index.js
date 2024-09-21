@@ -3,6 +3,11 @@ const express = require("express")
 const app = express()
 const cors = require("cors")
 app.use(cors())
+
+// Allow requests from  frontend URL
+app.use(cors({
+  origin: 'https://tech-agency-1.onrender.com',
+}));
 app.use(express.json())
 const { v4: uuidv4 } = require('uuid');
 

@@ -52,7 +52,7 @@ const exportOrders2 = () => {
 };
 
   useEffect(() => {
-    Axios.get("http://localhost:1000/orders")
+    Axios.get("https://tech-agency.onrender.com/orders")
       .then(res => {
         setOrders(res.data)
       })
@@ -62,7 +62,7 @@ const exportOrders2 = () => {
     if(order.statut=="rejected by Admin" ||order.statut=="accepted by Client" || order.statut=="rejected by Client" || order.price!=0 || order.duration !=0){
       alert("Can't accept anymore! ")
     }else{
-      Axios.put("http://localhost:1000/acceptByAdmin", { price: price, duration: duration, id: order._id })
+      Axios.put("https://tech-agency.onrender.com/acceptByAdmin", { price: price, duration: duration, id: order._id })
       .then(alert("Price and duration send to the Client!")
       , window.location.href = "http://localhost:5173/dashboard/Orders")
     }
@@ -73,7 +73,7 @@ const exportOrders2 = () => {
       if(order.statut=="rejected by Admin"){
         alert("ordre already rejected!")
       }else{
-        Axios.put("http://localhost:1000/refuseByAdmin", {
+        Axios.put("https://tech-agency.onrender.com/refuseByAdmin", {
           statut: "rejected by Admin",
           id: order._id
         })

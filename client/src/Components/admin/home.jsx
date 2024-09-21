@@ -12,7 +12,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchCount() {
-      const res = await fetch('http://localhost:1000/count');
+      const res = await fetch('https://tech-agency.onrender.com/count');
       const { count } = await res.json();
       setCount(count);
     }
@@ -23,7 +23,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchCount() {
-      const res = await fetch('http://localhost:1000/countmessages');
+      const res = await fetch('https://tech-agency.onrender.com/countmessages');
       const { countMessages } = await res.json();
       setCountMessages(countMessages);
     }
@@ -34,7 +34,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchCount() {
-      const res = await fetch('http://localhost:1000/countService');
+      const res = await fetch('https://tech-agency.onrender.com/countService');
       const { countService } = await res.json();
       setCountService(countService);
     }
@@ -45,7 +45,7 @@ export function Home() {
 
   useEffect(() => {
     async function fetchCount() {
-      const res = await fetch('http://localhost:1000/countClients');
+      const res = await fetch('https://tech-agency.onrender.com/countClients');
       const { countClient } = await res.json();
       setCountClient(countClient);
     }

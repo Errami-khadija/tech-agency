@@ -12,7 +12,7 @@ function Contact2() {
     e.preventDefault();
     
     try {
-      const response = await axios.post('http://localhost:1000/send', {
+      const response = await axios.post('https://tech-agency.onrender.com/send', {
         email,
         subject,
         message,

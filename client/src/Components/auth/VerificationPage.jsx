@@ -9,7 +9,7 @@ const VerificationPage = () => {
   useEffect(() => {
     const verifyEmail = async () => {
       try {
-        const response = await fetch(`http://localhost:1000/verify/${verificationToken}`, {
+        const response = await fetch(`https://tech-agency.onrender.com/verify/${verificationToken}`, {
           method: 'PUT',
         });
         if (response.ok) {

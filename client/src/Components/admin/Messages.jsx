@@ -10,7 +10,7 @@ export function Notifications() {
   const [selectedMessage, setSelectedMessage] = useState(null);
 
   useEffect(() => {
-    Axios.get('http://localhost:1000/messages').then((res) => {
+    Axios.get('https://tech-agency.onrender.com/messages').then((res) => {
       setMessages(res.data);
     });
   }, []);
@@ -23,7 +23,7 @@ export function Notifications() {
     event.preventDefault();
     const data = { recipient, subject, body };
     try {
-      await Axios.post('http://localhost:1000/sendEmail', data);
+      await Axios.post('https://tech-agency.onrender.com/sendEmail', data);
       alert('Email sent successfully');
       window.location.href = "http://localhost:5173/dashboard/Messages"
     } catch (error) {
