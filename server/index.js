@@ -6,7 +6,7 @@ app.use(cors())
 app.use(express.json())
 const { v4: uuidv4 } = require('uuid');
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
