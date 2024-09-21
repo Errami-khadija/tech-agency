@@ -1,7 +1,7 @@
 import React from 'react';
 import Inbox from '../../../public/img/letter.png';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState } from 'react'
 
 function Contact2() {
   const [email, setEmail] = useState('');
