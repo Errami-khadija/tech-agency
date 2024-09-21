@@ -25,7 +25,7 @@ export function Notifications() {
     try {
       await Axios.post('https://tech-agency.onrender.com/sendEmail', data);
       alert('Email sent successfully');
-      window.location.href = "http://localhost:5173/dashboard/Messages"
+      window.location.href = "https://tech-agency-1.onrender.com/dashboard/Messages"
     } catch (error) {
       console.error(error);
       alert('Failed to send email');

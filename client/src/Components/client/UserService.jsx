@@ -30,7 +30,7 @@ function UserService() {
     })
       .then(res => {
         alert("Order sent successefuly! ")
-        window.location.href = "http://localhost:5173/sidebar/userService"
+        window.location.href = "https://tech-agency-1.onrender.com/sidebar/userService"
         console.log(res.data)
       })
   }

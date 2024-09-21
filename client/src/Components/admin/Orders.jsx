@@ -64,7 +64,7 @@ const exportOrders2 = () => {
     }else{
       Axios.put("https://tech-agency.onrender.com/acceptByAdmin", { price: price, duration: duration, id: order._id })
       .then(alert("Price and duration send to the Client!")
-      , window.location.href = "http://localhost:5173/dashboard/Orders")
+      , window.location.href = "https://tech-agency-1.onrender.com/dashboard/Orders")
     }
   }
 

@@ -31,7 +31,7 @@ export function Responses() {
       axios.put("https://tech-agency.onrender.com/acceptByClient", {
         statut: "accepted by Client",
         id: order._id
-      }).then(window.location.href = "http://localhost:5173/sidebar/responses")
+      }).then(window.location.href = "https://tech-agency-1.onrender.com/sidebar/responses")
     }
 
   }
@@ -44,7 +44,7 @@ export function Responses() {
         statut: "rejected by Client",
         id: order._id
       })
-        .then(window.location.href = "http://localhost:5173/sidebar/responses")
+        .then(window.location.href = "https://tech-agency-1.onrender.com/sidebar/responses")
     }
   }
 

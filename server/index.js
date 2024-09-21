@@ -104,8 +104,8 @@ function sendVerificationEmail(email, verificationToken) {
     from: 'khadiijaerrami2021@gmail.com', 
     to: email,
     subject: 'Email Verification',
-    text: `Please verify your email by clicking on the following link: http://localhost:5173/verify/${verificationToken}`,
-    html: `<p>Please verify your email by clicking on the following link:</p><a href="http://localhost:5173/verify/${verificationToken}">Verify Email</a>`
+    text: `Please verify your email by clicking on the following link: https://tech-agency-1.onrender.com/verify/${verificationToken}`,
+    html: `<p>Please verify your email by clicking on the following link:</p><a href="https://tech-agency-1.onrender.com/verify/${verificationToken}">Verify Email</a>`
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
