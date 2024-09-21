@@ -7,7 +7,7 @@ import { Card, CardHeader, CardBody, CardFooter, Input, Button, Typography } fro
 export function SignUp() {
   const [showPassword, setShowPassword] = useState(false); 
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('')
   const [email, setEmail] = useState('')
 
   // Email validation function
