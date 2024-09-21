@@ -43,7 +43,7 @@ export function SignUp() {
       const data = await response.json();
 
       if (response.status === 200) {
-        alert(data.message);  // "Registration successful, please verify your email."
+        alert("Registration successful, please verify your email.");  // "Registration successful, please verify your email."
       } else if (response.status === 400) {
         alert(data.error);  // "User already exists"
       } else {
