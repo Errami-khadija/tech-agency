@@ -21,6 +21,16 @@ const router = express.Router();
 require('dotenv').config();
 app.use(bodyParser.json());
 
+const path = require('path');
+
+// Serve static files
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// Handle React routing, return all other requests to React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
 //CONNECT TO DB
 const username = "techAgency",
   password = "1234",
