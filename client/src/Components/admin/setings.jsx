@@ -37,7 +37,7 @@ const removeCookies=()=>{
   .then(res=>{
     alert("Profile updated successefuly! ");
     removeCookies();
-    window.location.href = "https://tech-agency-1.onrender.com/login";
+    window.location.href = "/login";
   })
 
   }

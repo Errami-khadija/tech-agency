@@ -36,7 +36,7 @@ function Login() {
 // Check for admin login first
 if (username === "Adminee_Tech_Agency" && password === "111") {
   // Handle admin login separately
-  window.location.href = "https://tech-agency-1.onrender.com/dashboard/home";
+  window.location.href = "/dashboard/home";
   setCookies("access_token", response.data.token); // Admin token (can be hardcoded or fetched)
   setAdminCookies("adminCookies", username);
   window.localStorage.setItem("username", username);

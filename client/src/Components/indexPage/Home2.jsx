@@ -7,12 +7,12 @@ function Home2() {
         <div className='flex flex-col hero'>
 
             <div className=" flex flex-row justify-between items-center py-4 w-full ">
-                <a  className="font-bold text-xl text-blue-500"><Link to="https://tech-agency-1.onrender.com/">TECH-AGENCY</Link></a>
+                <a  className="font-bold text-xl text-blue-500"><Link to="/">TECH-AGENCY</Link></a>
                 <div>
                     <ul className="flex flex-row">
-                        <li><a className='mx-3 text-base font-medium ' ><Link to="https://tech-agency-1.onrender.com/services">Services</Link></a></li>
-                        <li><a className='mx-3 text-base font-medium ' ><Link to="https://tech-agency-1.onrender.com/about">About</Link></a></li>
-                        <li><a className='mx-3 text-base font-medium ' ><Link to="https://tech-agency-1.onrender.com/contact">Contact</Link></a></li>
+                        <li><a className='mx-3 text-base font-medium ' ><Link to="/services">Services</Link></a></li>
+                        <li><a className='mx-3 text-base font-medium ' ><Link to="/about">About</Link></a></li>
+                        <li><a className='mx-3 text-base font-medium ' ><Link to="/contact">Contact</Link></a></li>
                     </ul>
                 </div>
                 <Link className='px-4 py-3 rounded-2xl mx-4 bg-blue-500 text-white font-medium text-sm cursor-pointer' to="https://tech-agency-1.onrender.com/signup">Get Started</Link>
@@ -28,7 +28,7 @@ function Home2() {
                         Get started today and take the first step towards achieving your goals.
                     <div className='hero-shapes shape2' />
                     </p>
-                    <Link className='px-4 py-3 rounded-2xl bg-blue-500 text-white font-medium text-sm cursor-pointer' to="https://tech-agency-1.onrender.com/signup">Get Started</Link>
+                    <Link className='px-4 py-3 rounded-2xl bg-blue-500 text-white font-medium text-sm cursor-pointer' to="/signup">Get Started</Link>
                    
                 </div>
 
