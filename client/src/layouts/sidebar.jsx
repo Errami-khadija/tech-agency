@@ -6,12 +6,12 @@ import {
   DashboardNavbar,
   Configurator,
   Footer,
-} from "@/widgets/layout";
-import sidRoutes from "@/sidRoutes";
-import { useMaterialTailwindController, setOpenConfigurator } from "@/context";
+} from "../layout";
+import sidRoutes from "../sidRoutes";
+import { useMaterialTailwindController, setOpenConfigurator } from "../context";
 
 import { useCookies } from 'react-cookie'
-import Login from "@/Components/auth/Login";
+import Login from "../Login";
 
 
 export function SideBar() {

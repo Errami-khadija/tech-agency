@@ -1,3 +1,3 @@
-export * from "@/layouts/dashboard";
-export * from "@/layouts/auth";
-export * from "@/layouts/sidebar";
+export * from "../dashboard";
+export * from "../auth";
+export * from "../sidebar";

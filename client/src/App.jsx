@@ -61,30 +61,6 @@ function App() {
     <>
     <Router>
       <AppRoutes />
-    
-     <Routes>
-       <Route path="/signup" element={<SignUp/>} />
-       <Route path="/login" element={<Login/>} />
-       <Route path="verify/:verificationToken" element={<VerificationPage/>} />
-
-       <Route path="/" element={<LandingPage/>} />
-       <Route path="/contact" element={<Contact2/>} />
-       <Route path="/services" element={<Services2/>} />
-       <Route path="/about" element={<Why/>} />
-        <Route path="/admin" element={<Admin/>} />
-        <Route path="/orders" element={<Orders/>} />
-        <Route path="/messages" element={<Messages/>} />
-        <Route path="/userService" element={<UserService/>} />
-        <Route path="/profileUser" element={<ProfileUser/>} />
-        
-        <Route path="/dashboard/*" element={<Dashboard />} />
-        <Route path="/sidebar/*" element={<SideBar />} />
-       <Route  path="home_user" element={<Home_user/>}/>
-       <Route path="/image" element={<Image/>} />
-       <Route path="/terms" element={<Terms/>} />
-
-
-    </Routes>
     </Router>
     
     </>
