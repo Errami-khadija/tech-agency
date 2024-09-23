@@ -19,13 +19,27 @@ import Terms from "./Components/indexPage/Terms";
 import Home_user from "./Components/client/HomeClient";
 
 import VerificationPage from "./Components/auth/VerificationPage";
+import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 
 import Image from './Components/Image'
  import './App.css';
+ const AppRoutes = () => {
+  const routes = useRoutes([
+    { path: '/logiin', element: <Login /> },
+   
+  ]);
+  return routes;
+};
+
+
 
 function App() {
   return (
-    <Routes>
+    <>
+    <Router>
+      <AppRoutes />
+    </Router>
+     <Routes>
        <Route path="/signup" element={<SignUp/>} />
        <Route path="/login" element={<Login/>} />
        <Route path="verify/:verificationToken" element={<VerificationPage/>} />
@@ -48,6 +62,9 @@ function App() {
 
 
     </Routes>
+    
+    </>
+   
   );
 }
 
