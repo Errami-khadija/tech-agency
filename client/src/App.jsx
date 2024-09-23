@@ -25,7 +25,30 @@ import Image from './Components/Image'
  import './App.css';
  const AppRoutes = () => {
   const routes = useRoutes([
-    { path: '/logiin', element: <Login /> },
+    { path: '/signup', element: <SignUp /> },
+    { path: '/login', element: <Login /> },
+    { path: '/verify/:verificationToken', element: <VerificationPage /> },
+    { path: '/', element: <LandingPage /> },
+    { path: '/contact', element: <Contact2 /> },
+    { path: '/services', element: <Services2 /> },
+    { path: '/about', element: <Why /> },
+
+    { path: '/admin', element: <Admin /> },
+
+    { path: '/orders', element: <Orders /> },
+    { path: '/messages', element: <Messages /> },
+    { path: '/userService', element: <UserService /> },
+    { path: '/profileUser', element: <ProfileUser /> },
+    { path: '/dashboard/*', element: <Dashboard /> },
+    { path: '/sidebar/*', element: <SideBar /> },
+    { path: '/home_user', element: <Home_user /> },
+
+    { path: '/terms', element: <Terms /> },
+
+
+
+
+
    
   ]);
   return routes;
@@ -39,29 +62,6 @@ function App() {
     <Router>
       <AppRoutes />
     </Router>
-     <Routes>
-       <Route path="/signup" element={<SignUp/>} />
-       <Route path="/login" element={<Login/>} />
-       <Route path="verify/:verificationToken" element={<VerificationPage/>} />
-
-       <Route path="/" element={<LandingPage/>} />
-       <Route path="/contact" element={<Contact2/>} />
-       <Route path="/services" element={<Services2/>} />
-       <Route path="/about" element={<Why/>} />
-        <Route path="/admin" element={<Admin/>} />
-        <Route path="/orders" element={<Orders/>} />
-        <Route path="/messages" element={<Messages/>} />
-        <Route path="/userService" element={<UserService/>} />
-        <Route path="/profileUser" element={<ProfileUser/>} />
-        
-        <Route path="/dashboard/*" element={<Dashboard />} />
-        <Route path="/sidebar/*" element={<SideBar />} />
-       <Route  path="home_user" element={<Home_user/>}/>
-       <Route path="/image" element={<Image/>} />
-       <Route path="/terms" element={<Terms/>} />
-
-
-    </Routes>
     
     </>
    
