@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: tech-agency-1
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    routes:
+      - src: /.*
+        dest: /index.html
