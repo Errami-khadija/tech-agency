@@ -6,4 +6,4 @@ services:
     startCommand: npm run dev
     routes:
       - src: /.*
-        dest: /index.html
+        dest: ./index.html
