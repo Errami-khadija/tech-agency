@@ -11,7 +11,7 @@ export default defineConfig({
   }
 ,
   server: {
-    proxy: process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://tech-agency.onrender.com',
+    proxy: process.env.NODE_ENV === 'development' ? 'http://localhost:1000' : 'https://tech-agency.onrender.com',
   },
 
 });
