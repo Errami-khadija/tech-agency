@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // The mode can be set to 'development' or 'production'
-  mode: 'development', // or 'production'
+  mode: 'production', // or 'production'
 
   // Entry point of your application
   entry: './src/main.js',
