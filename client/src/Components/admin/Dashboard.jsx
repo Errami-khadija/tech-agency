@@ -15,7 +15,7 @@ function Dashboard() {
 
   useEffect(() => {
     async function fetchCount() {
-      const res = await fetch('https://tech-agency.onrender.com/count');
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/count`);
       const { count } = await res.json();
       setCount(count);
     }
@@ -26,7 +26,7 @@ function Dashboard() {
 
   useEffect(() => {
     async function fetchCount() {
-      const res = await fetch('https://tech-agency.onrender.com/countmessages');
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/countmessages`);
       const { countMessages } = await res.json();
       setCountMessages(countMessages);
     }
