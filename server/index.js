@@ -6,7 +6,7 @@ app.use(cors())
 
 // Allow requests from  frontend URL
 app.use(cors({
-  origin: 'https://tech-agency-1.onrender.com',
+  origin: '*',
   credentials: true, 
 }));
 app.use(express.json())
