@@ -9,4 +9,9 @@ export default defineConfig({
   build: {
     outDir: 'dist',  // This ensures Vite outputs to the 'dist' folder
   }
+,
+  server: {
+    proxy: process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : 'https://tech-agency.onrender.com',
+  },
+
 });
