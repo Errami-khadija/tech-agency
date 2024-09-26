@@ -15,7 +15,7 @@ function Home2() {
                         <li><a className='mx-3 text-base font-medium ' ><Link to="/contact">Contact</Link></a></li>
                     </ul>
                 </div>
-                <a className='px-4 py-3 rounded-2xl mx-4 bg-blue-500 text-white font-medium text-sm cursor-pointer' href="/signup">Get Started</a>
+                <Link className='px-4 py-3 rounded-2xl mx-4 bg-blue-500 text-white font-medium text-sm cursor-pointer' to="/signup">Get Started</Link>
             </div>
             <div className="  hero  h-full w-full relative flex flex-1 flex-row py-6 items-center justify-center">
                 <div className=" flex flex-col left-0 w-1/2  top-0 text-left items-start justify-start ">
