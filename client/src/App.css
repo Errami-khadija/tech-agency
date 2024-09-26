@@ -239,17 +239,6 @@ nav ul ul li {
 	color: var(--titles-color);
 }
 /*****************Home***************/
- .home {
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url(../public/img/back-home.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-	width: 100%;
-	color: white;
-	padding-top: 10px;
-
-}
-
 .home .title {
 	margin-top: 100px;
 	padding: 20px;
