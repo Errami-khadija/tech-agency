@@ -1,7 +1,8 @@
 // CREATE SERVER
 const express = require("express")
 const app = express()
-
+const cors = require('cors');
+app.use(cors()); 
 app.use(express.json());       // Parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bodies
 

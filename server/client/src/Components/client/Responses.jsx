@@ -74,7 +74,7 @@ export function Responses() {
                     </tr>
                   </thead>
                   <tbody>
-                    {orders.map((order) => (
+                  {Array.isArray(orders) && services.length > 0 ?orders.map((order) => (
                       <tr key={order._id} className="m-1 text-gray-50">
                         <td>{order.subject}</td>
                         <td>{order.duration}</td>
@@ -90,7 +90,7 @@ export function Responses() {
                           </Button>
                         </td>
                       </tr>
-                    ))}
+                    )) : <p>No orders available</p>}
                   </tbody>
                 </table>
               </Card>
