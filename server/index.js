@@ -25,12 +25,11 @@ const path = require('path');
 
 
 // Serve static files from the React app
-const clientDistPath = path.join(__dirname, '../client/dist');
-app.use(express.static(clientDistPath));
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
-// Catch-all handler to serve React's index.html for client-side routing
+// Handle React routing, return all requests to React app
 app.get('*', (req, res) => {
-  res.sendFile(path.join(clientDistPath, 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
 });
 
 //CONNECT TO DB
