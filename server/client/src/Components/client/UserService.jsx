@@ -40,7 +40,7 @@ function UserService() {
     fetch('https://it-agency-fdb1.onrender.com/services')
         .then(response => response.json())
         .then(data => setServices(data))
-        .catch(err => console.error('Error fetching users', err));
+        .catch(err => console.error('Error fetching services', err));
 }, []);
 
 

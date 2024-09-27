@@ -1,15 +1,10 @@
 // CREATE SERVER
 const express = require("express")
 const app = express()
-const cors = require("cors")
-app.use(cors())
 
-// Allow requests from  frontend URL
-app.use(cors({
-  origin: '*',
-  credentials: true, 
-}));
-app.use(express.json())
+app.use(express.json());       // Parse JSON request bodies
+app.use(express.urlencoded({ extended: true })); // Parse URL-encoded request bodies
+
 const { v4: uuidv4 } = require('uuid');
 
 const bcrypt = require('bcryptjs');
@@ -404,11 +399,11 @@ app.get('/countService', async (req, res) => {
 
 app.get("/services", async (req, res) => {
   try {
-  const services = await serviceModel.find() || [];
+  const services = await serviceModel.find();
 
   res.json(services)
 } catch (error) {
-  res.status(500).send('Error fetching users');
+  res.status(500).send('Error fetching services');
 }
   
 })
