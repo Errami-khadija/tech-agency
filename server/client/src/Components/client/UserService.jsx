@@ -37,13 +37,11 @@ function UserService() {
 
   const [services, setServices] = useState([])
   useEffect(() => {
-    Axios.get("https://it-agency-fdb1.onrender.com/services")
-      .then(res => {
-        console.log(res.data);  // Add this to check the data
-        setServices(res.data);
-        
-      })
-  }, [services])
+    fetch('https://it-agency-fdb1.onrender.com/services')
+        .then(response => response.json())
+        .then(data => setServices(data))
+        .catch(err => console.error('Error fetching users', err));
+}, []);
 
 
   useEffect(() => {
