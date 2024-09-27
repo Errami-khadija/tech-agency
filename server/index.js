@@ -23,12 +23,14 @@ app.use(bodyParser.json());
 
 const path = require('path');
 
-// Serve static files
-app.use(express.static(path.join(__dirname, '../client/dist')));
 
-// Handle React routing, return all other requests to React app
+// Serve static files from the React app
+const clientDistPath = path.join(__dirname, '../client/dist');
+app.use(express.static(clientDistPath));
+
+// Catch-all handler to serve React's index.html for client-side routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+  res.sendFile(path.join(clientDistPath, 'index.html'));
 });
 
 //CONNECT TO DB
