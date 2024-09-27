@@ -44,7 +44,7 @@ mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.yqkzy.mongodb.n
 
 
 //Listen to SERVER
-app.listen("1000", () => {
+app.listen("1337", () => {
   console.log("server works good!");
 })
 
@@ -403,8 +403,8 @@ app.get('/countService', async (req, res) => {
 });
 
 app.get("/services", async (req, res) => {
+  const services = await serviceModel.find() || [];
 
-  const services = await serviceModel.find();
   res.json(services)
   
 })

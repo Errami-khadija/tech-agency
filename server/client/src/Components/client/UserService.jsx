@@ -39,7 +39,9 @@ function UserService() {
   useEffect(() => {
     Axios.get("https://it-agency-fdb1.onrender.com/services")
       .then(res => {
-        setServices(res.data)
+        console.log(res.data);  // Add this to check the data
+        setServices(res.data);
+        
       })
   }, [services])
 
@@ -72,7 +74,7 @@ function UserService() {
 
       <div className='container mt-4 ' >
 
-        {services.map(service => (
+{Array.isArray(services) && services.length > 0 ? services.map(service => (
           <Card sx={{ maxWidth: 345 }} key={service._id} className='User-Card bg-gradient-to-br from-blue-gray-800 to-blue-gray-900'>
             {/* <CardMedia
         component="img"
@@ -93,7 +95,7 @@ function UserService() {
               <button className='btn-Save Order' onClick={() => { setPopup(true); setSelectedService(service); }}>Order Now</button>
             </CardActions>
           </Card>
-        ))}
+        )) : <p>No services available</p>}
 
       </div>
        : <Login />
