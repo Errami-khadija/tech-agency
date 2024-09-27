@@ -23,7 +23,7 @@ export function Tables() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: response } = await axios.get('https://tech-agency.onrender.com/services');
+        const { data: response } = await axios.get('https://it-agency-fdb1.onrender.com/services');
         setData(response);
       } catch (error) {
         console.error(error.message);
@@ -34,7 +34,7 @@ export function Tables() {
     fetchData();
   }, []);
 
-  const api_base = 'https://tech-agency.onrender.com/';
+  const api_base = 'https://it-agency-fdb1.onrender.com/';
 
   const deleteTodo = async id => {
     const data = await fetch(api_base + '/service/delete/' + id, { method: "DELETE" }).then(res => res.json(),
@@ -61,7 +61,7 @@ export function Tables() {
    
   }
   const updateName = async(id, name)=>{
-    const data = await fetch("https://tech-agency.onrender.com//service/updateName",{
+    const data = await fetch("https://it-agency-fdb1.onrender.com/service/updateName",{
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -77,7 +77,7 @@ export function Tables() {
 
   
   const updateDescription = async(id, description)=>{
-    const data = await fetch("https://tech-agency.onrender.com/service/updateDescription",{
+    const data = await fetch("https://it-agency-fdb1.onrender.com/updateDescription",{
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

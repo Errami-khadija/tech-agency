@@ -38,7 +38,7 @@ const removeCookies=()=>{
 
   const updateProfile=async(id)=>{
        
-  await  axios.put("https://tech-agency.onrender.com/updateprofile", {username: username, password:password,id:id})
+  await  axios.put("https://it-agency-fdb1.onrender.com/updateprofile", {username: username, password:password,id:id})
   .then(res=>{
     alert("Profile updated successefuly! ");
     removeCookies();

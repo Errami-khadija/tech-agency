@@ -14,7 +14,7 @@ export function Responses() {
     const username = localStorage.getItem('username'); // Retrieve username from local storage
 
     if (username) {
-      axios.get(`https://tech-agency.onrender.com/ordersUser?username=${username}`)
+      axios.get(`https://it-agency-fdb1.onrender.com/ordersUser?username=${username}`)
         .then((res) => {
           setOrders(res.data);
         })
@@ -28,7 +28,7 @@ export function Responses() {
     if (order.statut == "rejected by Admin" || order.statut == "rejected by Client" || (order.price == 0 && order.duration == 0)) {
       alert("Can't accept")
     } else {
-      axios.put("https://tech-agency.onrender.com/acceptByClient", {
+      axios.put("https://it-agency-fdb1.onrender.com/acceptByClient", {
         statut: "accepted by Client",
         id: order._id
       }).then(window.location.href = "/sidebar/responses")
@@ -40,7 +40,7 @@ export function Responses() {
     if (order.price == 0 && order.duration == 0 || order.statut == "rejected by Admin") {
       alert("Can't refuse Order ! ")
     } else {
-      axios.put("https://tech-agency.onrender.com/refuseByClient", {
+      axios.put("https://it-agency-fdb1.onrender.com/refuseByClient", {
         statut: "rejected by Client",
         id: order._id
       })

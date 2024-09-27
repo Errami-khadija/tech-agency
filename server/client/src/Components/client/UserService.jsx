@@ -21,7 +21,7 @@ function UserService() {
   const [cookies, setCookies] = useCookies("access_token")
 
   const sendOrder = () => {
-    Axios.post("https://tech-agency.onrender.com/sendOrder", {
+    Axios.post("https://it-agency-fdb1.onrender.com/sendOrder", {
       service: selectedService.name,
       username: username,
       email: email,
@@ -37,7 +37,7 @@ function UserService() {
 
   const [services, setServices] = useState([])
   useEffect(() => {
-    Axios.get("https://tech-agency.onrender.com/services")
+    Axios.get("https://it-agency-fdb1.onrender.com/services")
       .then(res => {
         setServices(res.data)
       })

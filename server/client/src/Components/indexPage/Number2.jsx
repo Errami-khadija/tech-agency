@@ -12,7 +12,7 @@ function Number2() {
 
     useEffect(() => {
       async function fetchCount() {
-        const res = await fetch('https://tech-agency.onrender.com/countClients');
+        const res = await fetch('https://it-agency-fdb1.onrender.com/countClients');
         const { countClient } = await res.json();
         setCountClient(countClient);
       }
@@ -22,7 +22,7 @@ function Number2() {
   
     useEffect(() => {
       async function fetchCount() {
-        const res = await fetch('https://tech-agency.onrender.com/count');
+        const res = await fetch('https://it-agency-fdb1.onrender.com/count');
         const { count } = await res.json();
         setCount(count);
       }

@@ -32,7 +32,7 @@ export function SignUp() {
     }
 
     try {
-      const response = await fetch('https://tech-agency.onrender.com/register', {
+      const response = await fetch('https://it-agency-fdb1.onrender.com/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
