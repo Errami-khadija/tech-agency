@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import BarChart from './BarChart';
+import BarChart from './Barchart';
 import { Card } from "@material-tailwind/react";
 import PeopleIcon from '@mui/icons-material/People';
 import ForumIcon from '@mui/icons-material/Forum';
