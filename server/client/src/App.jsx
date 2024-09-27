@@ -1,5 +1,5 @@
-import Dashboard from "@/layouts/Dashboard";
-import  SideBar  from "@/layouts/sidebar";
+import Dashboard from "./layouts/dashboard";
+import  SideBar  from "./layouts/sidebar";
 
 
 import LandingPage from './Components/indexPage/LandingPage';
