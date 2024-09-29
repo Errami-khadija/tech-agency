@@ -35,7 +35,7 @@ function App() {
     <Route path="/verify/:verificationToken" element={<VerificationPage />} />
     <Route path="/" element={<LandingPage />} />
     <Route path="/contact" element={<Contact2 />} />
-    <Route path="/services" element={<Services2 />} />
+    <Route path="/servicess" element={<Services2 />} />
     <Route path="/about" element={<Why />} />
     <Route path="/admin" element={<Admin />} />
     <Route path="/orders" element={<Orders />} />

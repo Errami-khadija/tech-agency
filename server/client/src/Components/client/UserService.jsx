@@ -35,13 +35,29 @@ function UserService() {
       })
   }
 
-  const [services, setServices] = useState([])
-  useEffect(() => {
-    fetch('https://it-agency-fdb1.onrender.com/services')
-        .then(response => response.json())
-        .then(data => setServices(data))
-        .catch(err => console.error('Error fetching services', err));
+  const [services, setServices] = useState([]);
+
+useEffect(() => {
+  fetch('/services')
+    .then(response => {
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('application/json')) {
+        return response.json();  // Parse JSON if the content type is JSON
+      } else {
+        return response.text();  // Otherwise, treat it as plain text/HTML for debugging
+      }
+    })
+    .then(data => {
+      console.log(data);  // Log the data for debugging
+      if (typeof data === 'object') {  // Check if the parsed data is an object (valid JSON)
+        setServices(data);  // Set services if it's valid JSON
+      } else {
+        console.error('Expected JSON, but received text:', data);
+      }
+    })
+    .catch(err => console.error('Error fetching services:', err));
 }, []);
+
 
 
   useEffect(() => {

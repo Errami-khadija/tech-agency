@@ -402,7 +402,8 @@ app.get("/services", async (req, res) => {
   try {
   const services = await serviceModel.find();
 
-  res.json(services)
+  res.json(services);
+  res.json({ message: 'Data fetched successfully' });
 } catch (error) {
   res.status(500).send('Error fetching services');
 }

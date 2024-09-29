@@ -16,17 +16,17 @@ function Footer2() {
       <div className="w-full">
       <h4 className='font-bold text-lg text-blue-gray-800'>Services</h4>
        <ul className='flex flex-col my-2'>
-           <li className='py-1'><a className='text-blue-gray-600 font-light text-base  '><Link to="/services">Software Developement</Link></a></li>
-           <li className='py-1'><a  className='text-blue-gray-600 font-light text-base  '><Link to="/services">IT Security</Link></a></li>
-           <li className='py-1'><a  className='text-blue-gray-600 font-light text-base  '><Link to="/services">Cloud Management</Link></a></li>
-           <li className='py-1'><a  className='text-blue-gray-600 font-light text-base  '><Link to="/services">Saas Services</Link></a></li>
+           <li className='py-1'><a className='text-blue-gray-600 font-light text-base  '><Link to="/servicess">Software Developement</Link></a></li>
+           <li className='py-1'><a  className='text-blue-gray-600 font-light text-base  '><Link to="/servicess">IT Security</Link></a></li>
+           <li className='py-1'><a  className='text-blue-gray-600 font-light text-base  '><Link to="/servicess">Cloud Management</Link></a></li>
+           <li className='py-1'><a  className='text-blue-gray-600 font-light text-base  '><Link to="/servicess">Saas Services</Link></a></li>
        </ul>
       </div>
       <div className="w-full">
       <h4 className='font-bold text-lg text-blue-gray-800'>Website Map</h4>
        <ul className='flex flex-col my-2'>
            <li className='py-1'><a href="#" className='text-blue-gray-600 font-light text-base  '><Link to="/">Home</Link></a></li>
-           <li className='py-1'><a href="#" className='text-blue-gray-600 font-light text-base  '><Link to="/services">Services</Link></a></li>
+           <li className='py-1'><a href="#" className='text-blue-gray-600 font-light text-base  '><Link to="/servicess">Services</Link></a></li>
            <li className='py-1'><a href="#" className='text-blue-gray-600 font-light text-base  '><Link to="/about">About us</Link></a></li>
            <li className='py-1'><a href="#" className='text-blue-gray-600 font-light text-base  '><Link to="/contact">Contact Us</Link></a></li>
        </ul>

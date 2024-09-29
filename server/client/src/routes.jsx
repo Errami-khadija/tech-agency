@@ -44,7 +44,7 @@ export const routes = [
       {
         icon: <SourceIcon {...icon} />,
         name: "Services",
-        path: "/Services",
+        path: "/ServicesAdmin",
         element: <Services />,
       },
       {

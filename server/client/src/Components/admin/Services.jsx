@@ -38,7 +38,7 @@ export function Tables() {
 
   const deleteTodo = async id => {
     const data = await fetch(api_base + '/service/delete/' + id, { method: "DELETE" }).then(res => res.json(),
-    window.location.href = "/dashboard/Services");
+    window.location.href = "/dashboard/ServicesAdmin");
     setData(data.result);
   }
 
@@ -53,7 +53,7 @@ export function Tables() {
         description:newDescription
       })
     }).then(res => res.json(),
-    window.location.href = "/dashboard/Services");
+    window.location.href = "/dashboard/ServicesAdmin");
 
     setData([...data, data]);
     setNewTitre("");
@@ -71,7 +71,7 @@ export function Tables() {
         id:id
       })
     }).then(res => res.json(),
-     window.location.href = "/dashboard/Services");
+     window.location.href = "/dashboard/ServicesAdmin");
     
   }
 
@@ -87,7 +87,7 @@ export function Tables() {
         id:id
       })
     }).then(res => res.json(),
-     window.location.href = "/dashboard/Services");
+     window.location.href = "/dashboard/ServicesAdmin");
     
   }
 

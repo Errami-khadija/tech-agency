@@ -10,7 +10,7 @@ function Home2() {
                 <a  className="font-bold text-xl text-blue-500"><Link to="/">TECH-AGENCY</Link></a>
                 <div>
                     <ul className="flex flex-row">
-                        <li><a className='mx-3 text-base font-medium ' ><Link to="/services">Services</Link></a></li>
+                        <li><a className='mx-3 text-base font-medium ' ><Link to="/servicess">Services</Link></a></li>
                         <li><a className='mx-3 text-base font-medium ' ><Link to="/about">About</Link></a></li>
                         <li><a className='mx-3 text-base font-medium ' ><Link to="/contact">Contact</Link></a></li>
                     </ul>
