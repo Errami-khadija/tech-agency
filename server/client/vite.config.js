@@ -11,7 +11,12 @@ export default defineConfig({
   }
 ,
   server: {
-    proxy: process.env.NODE_ENV === 'development' ? 'http://localhost:1337' : 'https://it-agency-fdb1.onrender.com/',
+    proxy: {
+      'api':{
+        target: "http://localhost:1337",
+        changeOrigin: true
+      }
+    }
   },
 
 });

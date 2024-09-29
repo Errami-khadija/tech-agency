@@ -22,13 +22,7 @@ const path = require('path');
 console.log("the directory name is: "+__dirname);
 
 
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, '/client/dist')));
 
-// Handle React routing, return all requests to React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/dist/index.html'));
-});
 
 //CONNECT TO DB
 const username = "techAgency",
@@ -398,7 +392,7 @@ app.get('/countService', async (req, res) => {
   }
 });
 
-app.get("/services", async (req, res) => {
+app.get("/service/read", async (req, res) => {
   try {
   const services = await serviceModel.find();
 
@@ -550,6 +544,14 @@ app.post("/uploads", async (req, res)=>{
     res.status(409).json({message: error.message})
   }
 })
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '/client/dist')));
+
+// Handle React routing, return all requests to React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/dist/index.html'));
+});
 
 
 

@@ -38,7 +38,7 @@ function UserService() {
   const [services, setServices] = useState([]);
 
 useEffect(() => {
-  fetch('/services')
+  fetch('/service/read')
     .then(response => {
       const contentType = response.headers.get('content-type');
       if (contentType && contentType.includes('application/json')) {
