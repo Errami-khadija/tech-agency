@@ -23,7 +23,7 @@ export function Tables() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: response } = await axios.get('https://it-agency-fdb1.onrender.com/services');
+        const { data: response } = await axios.get('https://it-agency-fdb1.onrender.com/service/read');
         setData(response);
       } catch (error) {
         console.error(error.message);

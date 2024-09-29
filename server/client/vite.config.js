@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     proxy: {
       'api':{
-        target: "http://localhost:1337",
+        target: "https://it-agency-fdb1.onrender.com",
         changeOrigin: true
       }
     }
