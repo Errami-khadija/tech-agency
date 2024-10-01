@@ -13,14 +13,16 @@ function Contact2() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-   // Check if the email is valid
+ 
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+      // Check if the email is valid
    if (!isValidEmail(email)) {
     alert('Please enter a valid email address.');
     return;
   }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
     
     try {
       const response = await axios.post('https://it-agency-fdb1.onrender.com/send', {
