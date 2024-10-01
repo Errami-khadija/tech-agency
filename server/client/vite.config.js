@@ -10,13 +10,13 @@ export default defineConfig({
     outDir: 'dist',  // This ensures Vite outputs to the 'dist' folder
   }
 ,
-  server: {
-    proxy: {
-      'api':{
-        target: "https://it-agency-fdb1.onrender.com",
-        changeOrigin: true
-      }
-    }
-  },
+  // server: {
+  //   proxy: {
+  //     'api':{
+  //       target: "https://it-agency-fdb1.onrender.com",
+  //       changeOrigin: true
+  //     }
+  //   }
+  // },
 
 });
