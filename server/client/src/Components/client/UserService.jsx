@@ -35,28 +35,14 @@ function UserService() {
       })
   }
 
-  const [services, setServices] = useState([]);
+  const [services, setServices] = useState([])
+  useEffect(() => {
+    Axios.get("https://it-agency-fdb1.onrender.com/service/read")
+      .then(res => {
+        setServices(res.data)
+      })
+  }, [services])
 
-useEffect(() => {
-  fetch('https://it-agency-fdb1.onrender.com/service/read')
-    .then(response => {
-      const contentType = response.headers.get('content-type');
-      if (contentType && contentType.includes('application/json')) {
-        return response.json();  // Parse JSON if the content type is JSON
-      } else {
-        return response.text();  // Otherwise, treat it as plain text/HTML for debugging
-      }
-    })
-    .then(data => {
-      console.log(data);  // Log the data for debugging
-      if (typeof data === 'object') {  // Check if the parsed data is an object (valid JSON)
-        setServices(data);  // Set services if it's valid JSON
-      } else {
-        console.error('Expected JSON, but received text:', data);
-      }
-    })
-    .catch(err => console.error('Error fetching services:', err));
-}, []);
 
 
 

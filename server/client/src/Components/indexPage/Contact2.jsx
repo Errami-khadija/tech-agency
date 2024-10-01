@@ -8,6 +8,17 @@ function Contact2() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
 
+  // Email validation function
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+   // Check if the email is valid
+   if (!isValidEmail(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -43,7 +54,7 @@ function Contact2() {
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            type="text"
+            type="email"
             className="bg-blue-600 border-none outline-none p-4 w-1/2 rounded-2xl"
             placeholder="email"
             required

@@ -20,7 +20,7 @@ export function Dashboard() {
       <Sidenav
         routes={routes}
         brandImg={
-          sidenavType === "dark" ? "/img/favicon.png" : "/img/logo-ct-dark.png"
+          sidenavType === "dark" ? "../../public/img/favicon.png" : "../../public/img/logo-ct-dark.png"
         }
       />
       </div>

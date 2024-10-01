@@ -53,7 +53,7 @@ function Terms() {
            
                 <h2>8. To contact the site:</h2>
            
-              <ul><li><h5>8.1. To contact the fpt_cours.shop, use the "Contact us" form.</h5></li>
+              <ul><li><h5>8.1. To contact the it-agency, use the "Contact us" form.</h5></li>
               </ul>
               </div>
       
